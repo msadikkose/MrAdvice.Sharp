@@ -6,11 +6,11 @@ using System.Text;
 
 namespace MrAdvice.Sharp.Test.Aspects.OnExceptionAspectTests
 {
-    public class TestAspect:OnExceptionAspect
+    public class ThrovExceptionAfterHandledAspect : OnExceptionAspect
     {
         public override void OnException(MethodExecutionArgs args)
         {
-            
+            args.FlowBehavior = FlowBehavior.ThrowException;
         }
     }
 }

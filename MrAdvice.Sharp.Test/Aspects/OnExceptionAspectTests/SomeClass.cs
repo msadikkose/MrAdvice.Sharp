@@ -1,15 +1,58 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace MrAdvice.Sharp.Test.Aspects.OnExceptionAspectTests
 {
-    [TestAspect]
+  
     public class SomeClass
     {
-        public void SomeMethod()
+        public int Bar { get; set; }
+        [VoidMethodTestAspect]
+        public void SomeVoidMethod(int bar)
         {
-            throw new NotImplementedException();
+            Bar = bar;
+            throw new Exception();
         }
+
+        [VoidMethodTestAspect]
+        public async Task SomeVoidMethodAsync(int bar)
+        {
+            await Task.Delay(100);
+            Bar = bar;
+            throw new Exception();
+        }
+
+        [IntMethodTeestAspect]
+        public int ReturnIntegerMethod()
+        {
+            throw new Exception();
+        }
+
+
+        [IntMethodTeestAspect]
+        public async Task<int> ReturnIntegerMethodAsync()
+        {
+            await Task.Delay(10);
+            throw new Exception();
+        }
+
+
+        [ThrovExceptionAfterHandledAspect]
+        public void SomeVoidMethodAndThrow(int bar)
+        {
+            Bar = bar;
+            throw new Exception();
+        }
+
+        [ThrovExceptionAfterHandledAspect]
+        public async Task SomeVoidMethodThrowAsync(int bar)
+        {
+            await Task.Delay(100);
+            Bar = bar;
+            throw new Exception();
+        }
+
     }
 }
