@@ -13,11 +13,11 @@ namespace MrAdvice.Sharp.Model
         public IList<object> Arguments { get; private set; }
         public bool HasReturnValue { get; private set; }
         public object ReturnValue { get; private set; }
-        public MethodBase TargetMethod { get; private set; }
+        public MethodBase Method { get; private set; }
         public string TargetName { get; private set; }
         public bool IsTargetMethodAsync { get; private set; }
-        public MethodAsyncAdviceContext Context { get; private set; }
-
+        private MethodAsyncAdviceContext Context { get; set; }
+        public FlowBehavior FlowBehavior { get; set; }
 
 
         public MethodExecutionArgs(MethodAsyncAdviceContext context, Exception exception)
@@ -26,10 +26,11 @@ namespace MrAdvice.Sharp.Model
             Exception = exception;
             Arguments = context.Arguments;
             HasReturnValue = context.HasReturnValue;
-            TargetMethod = context.TargetMethod;
+            Method = context.TargetMethod;
             TargetName = context.TargetName;
             IsTargetMethodAsync = context.IsTargetMethodAsync;
-            ReturnValue = context.ReturnValue;
+            if(context.HasReturnValue)
+                ReturnValue = context.ReturnValue;
         }
 
         public void SetReturnValue<T>(T returnValue)

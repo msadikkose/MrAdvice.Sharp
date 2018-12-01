@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.102
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MrAdvice.Sharp", "MrAdvice.Sharp.csproj", "{A1754FA9-16D3-40FB-B710-551817C21305}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MrAdvice.Sharp", "MrAdvice.Sharp\MrAdvice.Sharp.csproj", "{66A0A3E0-D313-47B2-AEEC-B65AF6EFE75B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MrAdvice.Sharp.Test", "MrAdvice.Sharp.Test\MrAdvice.Sharp.Test.csproj", "{9DF1463C-310E-42DE-9311-9EA0AD07FE9B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +13,14 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{A1754FA9-16D3-40FB-B710-551817C21305}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A1754FA9-16D3-40FB-B710-551817C21305}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A1754FA9-16D3-40FB-B710-551817C21305}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A1754FA9-16D3-40FB-B710-551817C21305}.Release|Any CPU.Build.0 = Release|Any CPU
+		{66A0A3E0-D313-47B2-AEEC-B65AF6EFE75B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66A0A3E0-D313-47B2-AEEC-B65AF6EFE75B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66A0A3E0-D313-47B2-AEEC-B65AF6EFE75B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66A0A3E0-D313-47B2-AEEC-B65AF6EFE75B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9DF1463C-310E-42DE-9311-9EA0AD07FE9B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9DF1463C-310E-42DE-9311-9EA0AD07FE9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9DF1463C-310E-42DE-9311-9EA0AD07FE9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9DF1463C-310E-42DE-9311-9EA0AD07FE9B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
