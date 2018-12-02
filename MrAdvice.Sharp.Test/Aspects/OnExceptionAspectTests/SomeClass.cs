@@ -24,14 +24,14 @@ namespace MrAdvice.Sharp.Test.Aspects.OnExceptionAspectTests
             throw new Exception();
         }
 
-        [IntMethodTeestAspect]
+        [IntMethodTestAspect]
         public int ReturnIntegerMethod()
         {
             throw new Exception();
         }
 
 
-        [IntMethodTeestAspect]
+        [IntMethodTestAspect]
         public async Task<int> ReturnIntegerMethodAsync()
         {
             await Task.Delay(10);

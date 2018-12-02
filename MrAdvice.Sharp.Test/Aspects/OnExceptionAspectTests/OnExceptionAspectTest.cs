@@ -30,7 +30,7 @@ namespace MrAdvice.Sharp.Test.Aspects.OnExceptionAspectTests
         {
             SomeClass someClass = new SomeClass();
             int result = someClass.ReturnIntegerMethod();
-            Assert.AreEqual(IntMethodTeestAspect.DefaultReturnVale, result);
+            Assert.AreEqual(IntMethodTestAspect.DefaultReturnVale, result);
         }
 
         [TestMethod]
@@ -38,7 +38,7 @@ namespace MrAdvice.Sharp.Test.Aspects.OnExceptionAspectTests
         {
             SomeClass someClass = new SomeClass();
             int result = await someClass.ReturnIntegerMethodAsync();
-            Assert.AreEqual(IntMethodTeestAspect.DefaultReturnVale, result);
+            Assert.AreEqual(IntMethodTestAspect.DefaultReturnVale, result);
         }
 
         [TestMethod]

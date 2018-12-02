@@ -6,7 +6,7 @@ using System.Text;
 
 namespace MrAdvice.Sharp.Test.Aspects.OnExceptionAspectTests
 {
-    public class IntMethodTeestAspect : OnExceptionAspect
+    public class IntMethodTestAspect : OnExceptionAspect
     {
         public static int DefaultReturnVale = 10;
         public override void OnException(MethodExecutionArgs args)
