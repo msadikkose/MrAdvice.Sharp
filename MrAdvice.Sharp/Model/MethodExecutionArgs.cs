@@ -25,5 +25,10 @@ namespace MrAdvice.Sharp.Model
                 ReturnValue = context.ReturnValue;
         }
 
+        internal void SetException(Exception ex)
+        {
+            Exception = ex;
+        }
+
     }
 }

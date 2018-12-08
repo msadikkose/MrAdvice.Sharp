@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace MrAdvice.Sharp.Aspects
 {
-    [AttributeUsage(AttributeTargets.Method)]
-    public class MethodInterceptionAspect : Attribute, IMethodAsyncAdvice
+    [AttributeUsage(AttributeTargets.Method| AttributeTargets.Class)]
+    public abstract class MethodInterceptionAspect : Attribute, IMethodAsyncAdvice
     {
         [DebuggerHidden]
         public async Task Advise(MethodAsyncAdviceContext context)
