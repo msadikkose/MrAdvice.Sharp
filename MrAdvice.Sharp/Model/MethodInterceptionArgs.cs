@@ -5,28 +5,23 @@ namespace MrAdvice.Sharp.Model
 {
     public class MethodInterceptionArgs : Args
     {
-        public MethodInterceptionArgs(MethodAsyncAdviceContext context)
+        public MethodInterceptionArgs(MethodAsyncAdviceContext context):base(context)
         {
-            Context = context;
-            Arguments = context.Arguments;
-            HasReturnValue = context.HasReturnValue;
-            Method = context.TargetMethod;
-            MethodName = context.TargetName;
-            IsTargetMethodAsync = context.IsTargetMethodAsync;
-            if (context.HasReturnValue)
-            {
-                ReturnValue = context.ReturnValue;
-            }
+           
+        }
+        public MethodInterceptionArgs(MethodAdviceContext context):base(context)
+        {
+           
         }
 
         public void Proceed()
         {
-            Context.ProceedAsync();
+            AsyncContext?.ProceedAsync();
         }
 
         public async Task ProceedAsync()
         {
-            await Context.ProceedAsync();
+            await AsyncContext?.ProceedAsync();
         }
     }
 }

@@ -2,18 +2,17 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <Version>0.0.3</Version>
+    <Version>0.1.0</Version>
     <Authors>Muhammed Sadık Köse</Authors>
     <Company></Company>
-    <PackageReleaseNotes>OnMethodBoundaryAspect added.
-Now it supports three aspect, OnExceptionAspect, MethodInterceptionAspect and OnMethodBoundaryAspect!
+    <PackageReleaseNotes>It supports MethodImplementationAspect, OnExceptionAspect, MethodInterceptionAspect and OnMethodBoundaryAspect!
 Please also add MrAdvice  version 2.8.2  reference to your project.</PackageReleaseNotes>
     <NeutralLanguage>en-US</NeutralLanguage>
     <Description>Free version of the PostSharp library based on MrAdvice</Description>
     <PackageProjectUrl>https://github.com/msadikkose/MrAdvice.Sharp</PackageProjectUrl>
     <RepositoryUrl>https://github.com/msadikkose/MrAdvice.Sharp</RepositoryUrl>
     <PackageIconUrl>https://raw.githubusercontent.com/msadikkose/MrAdvice.Sharp/master/nuget_icon.png</PackageIconUrl>
-    <PackageTags>Aspect Oriented Programmin, AOP, MrAdvice, PostSharp</PackageTags>
+    <PackageTags>Aspect Oriented Programming, AOP, MrAdvice, PostSharp</PackageTags>
   </PropertyGroup>
 
   <ItemGroup>

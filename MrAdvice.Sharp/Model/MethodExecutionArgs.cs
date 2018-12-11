@@ -12,17 +12,10 @@ namespace MrAdvice.Sharp.Model
 
         public FlowBehavior FlowBehavior { get; set; }
 
-        public MethodExecutionArgs(MethodAsyncAdviceContext context, Exception exception)
+        public MethodExecutionArgs(MethodAsyncAdviceContext context, Exception exception): base(context)
         {
-            Context = context;
             Exception = exception;
-            Arguments = context.Arguments;
-            HasReturnValue = context.HasReturnValue;
-            Method = context.TargetMethod;
-            MethodName = context.TargetName;
-            IsTargetMethodAsync = context.IsTargetMethodAsync;
-            if(context.HasReturnValue)
-                ReturnValue = context.ReturnValue;
+            
         }
 
         internal void SetException(Exception ex)
