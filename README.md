@@ -12,6 +12,6 @@ OnMethodBoundaryAspect
 
 To use download these two packages via nuget.
 
-Install-Package MrAdvice.Sharp -Version 0.0.3
+Install-Package MrAdvice.Sharp -Version 0.1.0
 
 Install-Package MrAdvice -Version 2.8.2
