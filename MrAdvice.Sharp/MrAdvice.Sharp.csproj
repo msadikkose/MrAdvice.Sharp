@@ -2,21 +2,38 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <Version>0.1.0</Version>
+    <Version>1.0.1</Version>
     <Authors>Muhammed Sadık Köse</Authors>
     <Company></Company>
     <PackageReleaseNotes>It supports MethodImplementationAspect, OnExceptionAspect, MethodInterceptionAspect and OnMethodBoundaryAspect!
-Please also add MrAdvice  version 2.8.2  reference to your project.</PackageReleaseNotes>
+Please also add MrAdvice  version 2.8.8  reference to your project.</PackageReleaseNotes>
     <NeutralLanguage>en-US</NeutralLanguage>
     <Description>Free version of the PostSharp library based on MrAdvice</Description>
     <PackageProjectUrl>https://github.com/msadikkose/MrAdvice.Sharp</PackageProjectUrl>
     <RepositoryUrl>https://github.com/msadikkose/MrAdvice.Sharp</RepositoryUrl>
-    <PackageIconUrl>https://raw.githubusercontent.com/msadikkose/MrAdvice.Sharp/master/nuget_icon.png</PackageIconUrl>
+    
+    
     <PackageTags>Aspect Oriented Programming, AOP, MrAdvice, PostSharp</PackageTags>
+    
+    
+    <PackageIcon>sharp.jpg</PackageIcon>
+    
+    
+   
+
+    <PackageLicenseUrl>https://opensource.org/licenses/mit-license.php</PackageLicenseUrl>
+    
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="MrAdvice" Version="2.8.2" />
+    <PackageReference Include="MrAdvice" Version="2.8.8" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="C:\Users\msadik.kose\Downloads\sharp.jpg">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
   </ItemGroup>
 
 </Project>
