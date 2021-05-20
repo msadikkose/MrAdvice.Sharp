@@ -24,19 +24,16 @@ namespace  MrAdvice.Sharp.Aspects
             {
                 MethodExecutionArgs args = new MethodExecutionArgs(context, ex);
                 OnException(args);
-                CheckFlowBehavior(args);
+                if (args.FlowBehavior == FlowBehavior.RethrowException)
+                    throw;
+                if (args.FlowBehavior == FlowBehavior.ThrowException)
+                    throw ex;
             }
         }
 
         public virtual void  OnException(MethodExecutionArgs args)
         {
 
-        }
-        [DebuggerHidden]
-        private void CheckFlowBehavior(MethodExecutionArgs args)
-        {
-            if (args.FlowBehavior == FlowBehavior.RethrowException || args.FlowBehavior == FlowBehavior.ThrowException)
-                throw args.Exception;
         }
     }
 }
